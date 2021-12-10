@@ -29,21 +29,21 @@ song = st.sidebar.selectbox('Select a song', singer_to_song[singer])
 
 # display the original song
 
-st.markdown("Lets listen to the original song first")
+st.markdown("Let's listen to the original song first")
 aud1 = open("outputs/original/"+str(song)+"_"+str(singer)+".wav",'rb')
 aud1 = aud1.read()
 st.audio(aud1)
 
 # display the lyrics
 
-st.markdown("Lets listen to the lyrics now")
+st.markdown("Let's listen to the lyrics now")
 aud2 = open("outputs/read/"+str(song)+"_"+str(singer)+".wav",'rb')
 aud2 = aud2.read()
 st.audio(aud2)
 
 # display the reconstructed song
 
-st.markdown("Lets listen to the reconstructed audio")
+st.markdown("Let's listen to the reconstructed audio")
 aud3 = open("outputs/reconstructed/"+str(song)+"_"+str(singer)+".wav",'rb')
 aud3 = aud3.read()
 st.audio(aud3)
@@ -60,4 +60,4 @@ M2 = abs(spectrogram2)
 
 sim_metric = (np.linalg.norm(np.dot(M2.T,M1))/np.linalg.norm(M2)/np.linalg.norm(M1))/(np.linalg.norm(np.dot(M2.T,M2))/np.linalg.norm(M2)/np.linalg.norm(M2))
 
-st.metric('Similarity', str(round(sim_metric,2)))
+st.metric('Similarity', str(round(sim_metric,2)), str(round(sim_metric-0.74,2)))
