@@ -20,11 +20,11 @@ st.image("app_files/front_page.PNG")
 
 # create the singer to song dictionary
 
-singer_to_song = {'ADIZ':['01']}
+singer_to_song = {'ADIZ':['01'], 'NJAT':['15'], 'SAMF':['13'], 'JTAN':['07'], 'KENN':['17']}
 
 # create the selection boxes
 
-singer = st.sidebar.selectbox('Select a singer', ('ADIZ','JLEE','JTAN','KENN','MCUR','MPOL','MPUR','NJAT','PMAR','SAMF','VKOW','ZHIY'))
+singer = st.sidebar.selectbox('Select a singer', ('ADIZ','JTAN','KENN','NJAT','SAMF'))
 song = st.sidebar.selectbox('Select a song', singer_to_song[singer])
 
 # display the original song
