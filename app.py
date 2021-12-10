@@ -2,8 +2,14 @@
 
 import sys
 import streamlit as st
-import librosa
 import numpy as np
+import subprocess
+
+# implement pip as a subprocess:
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+'librosa'])
+
+import librosa
 
 # Basic page setup
 
