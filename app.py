@@ -16,7 +16,7 @@ import librosa
 st.set_page_config(layout='centered')
 
 st.markdown("<p style='color:black;font-size:32px;text-align:center'><b>11755/18797 Machine Learning For Signal Processing: Final Project</b></p>", unsafe_allow_html=True)
-st.image("app_files/front_page.png")
+st.image("app_files/front_page.PNG")
 
 # create the singer to song dictionary
 
